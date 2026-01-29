@@ -1,0 +1,51 @@
+# 1. 사이트 기본 정보
+site_name: 나만의 위키
+site_url: https://jarrodkim.github.io/my-wiki
+repo_url: https://github.com/jarrodkim/my-wiki
+repo_name: GitHub
+
+# 2. 테마 설정 (Material)
+theme:
+  name: material
+  language: ko             # 한국어 적용
+  palette:                 # 다크/라이트 모드 전환 버튼
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 다크 모드로 전환
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 라이트 모드로 전환
+  features:
+    - navigation.tabs      # 상단 탭 네비게이션
+    - navigation.top       # '맨 위로' 버튼
+    - navigation.indexes   # 폴더 클릭 시 index.md 보여주기
+    - content.code.copy    # 코드 복사 버튼
+
+# 3. 플러그인 설정
+plugins:
+  - search                 # 검색 기능
+  - roamlinks              # [[WikiLink]] 문법 지원 (필수)
+
+# 4. 마크다운 확장 기능 (옵시디언 문법 호환)
+markdown_extensions:
+  - admonition             # 콜아웃 (Callout) 지원
+  - pymdownx.details       # 접기/펼치기 (Details) 지원
+  - pymdownx.superfences:  # 코드 블록 및 Mermaid 다이어그램 지원
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:     # 체크박스 리스트 지원
+      custom_checkbox: true
+  - pymdownx.highlight:    # 코드 하이라이팅
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - attr_list              # 이미지 크기 조절 등 속성 지원
+  - tables                 # 표 지원
+  - footnotes              # 각주 지원
