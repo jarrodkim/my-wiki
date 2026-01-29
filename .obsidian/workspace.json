@@ -10,15 +10,13 @@
           {
             "id": "eccc837c12922f26",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
                 "file": "docs/linux/introduce.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
-              "pinned": true,
               "icon": "lucide-file",
               "title": "introduce"
             }
@@ -76,7 +74,8 @@
               "title": "북마크"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -199,6 +198,7 @@
     "site/linux/introduce/index.html",
     "site/linux/introduce",
     "site/assets/images/favicon.png",
+    "images/Pasted image 20260129172901.png",
     "Pasted image 20260129172109.png",
     "docs/index.md",
     "docs/obsidian/directory.md",
