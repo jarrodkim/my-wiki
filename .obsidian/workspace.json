@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2026-01-29.md",
-                "mode": "source",
+                "file": "docs/linux/introduce.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-01-29"
+              "title": "introduce"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2026-01-29.md",
+                "file": "docs/linux/introduce.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "2026-01-29 의 백링크"
+              "title": "introduce 의 백링크"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2026-01-29.md",
+                "file": "docs/linux/introduce.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "2026-01-29 의 나가는 링크"
+              "title": "introduce 의 나가는 링크"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2026-01-29.md",
+                "file": "docs/linux/introduce.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2026-01-29 의 개요"
+              "title": "introduce 의 개요"
             }
           }
         ]
@@ -183,8 +183,9 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "66202d4a57f90285",
+  "active": "eccc837c12922f26",
   "lastOpenFiles": [
+    "2026-01-29.md",
     "site/search/search_index.json",
     "site/search",
     "site/obsidian/main/index.html",
@@ -195,7 +196,6 @@
     "site/obsidian/directory",
     "site/obsidian",
     "site/mlops/index.html",
-    "site/mlops",
     "site/assets/images/favicon.png",
     "site/images/Pasted image 20260129175949.png",
     "docs/linux/introduce.md",
@@ -208,7 +208,6 @@
     "무제.canvas",
     "images/Pasted image 20260129173358.png",
     "images/Pasted image 20260129172901.png",
-    "Pasted image 20260129172109.png",
-    "2026-01-29.md"
+    "Pasted image 20260129172109.png"
   ]
 }
