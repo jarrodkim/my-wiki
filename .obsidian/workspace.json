@@ -11,13 +11,14 @@
             "id": "578216117e12d62f",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "무제 1.base",
-                "viewName": "표"
+                "file": "환영합니다!.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "무제 1"
+              "icon": "lucide-file",
+              "title": "환영합니다!"
             }
           }
         ]
@@ -109,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "무제 1.base",
+                "file": "환영합니다!.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +120,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "무제 1 의 백링크"
+              "title": "환영합니다! 의 백링크"
             }
           },
           {
@@ -128,12 +129,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "무제 1.base",
+                "file": "환영합니다!.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "무제 1 의 나가는 링크"
+              "title": "환영합니다! 의 나가는 링크"
             }
           },
           {
@@ -171,13 +172,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "무제 1.base",
+                "file": "환영합니다!.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "무제 1 의 개요"
+              "title": "환영합니다! 의 개요"
             }
           }
         ]
@@ -200,10 +201,11 @@
   },
   "active": "578216117e12d62f",
   "lastOpenFiles": [
-    "mkdoc.yaml",
-    "무제.base",
     "무제 1.base",
     "환영합니다!.md",
+    "requirements.txt",
+    "mkdoc.yaml",
+    "무제.base",
     "무제.md"
   ]
 }
