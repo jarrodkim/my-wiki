@@ -216,6 +216,10 @@
   },
   "active": "66202d4a57f90285",
   "lastOpenFiles": [
+    "site/obsidian-main/index.html",
+    "site/obsidian-main",
+    "site/obsidian-docs/index.html",
+    "site/obsidian-docs",
     "docs/index.md",
     "docs/obsidian-docs.md",
     "docs/obsidian-main.md",
@@ -226,10 +230,7 @@
     "site/index.html",
     "site/sitemap.xml.gz",
     "site/sitemap.xml",
-    "site/404.html",
     "2026-01-29.md",
-    "site/assets/stylesheets/palette.ab4e12ef.min.css.map",
-    "site/assets/stylesheets/palette.ab4e12ef.min.css",
     "site/assets/images/favicon.png"
   ]
 }
