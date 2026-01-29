@@ -218,3 +218,7 @@ mkdocs-roamlinks-plugin
 ```
 python -m mkdocs build
 ```
+
+### md -> html
+md 는 원고 
+html 은 완성본 
