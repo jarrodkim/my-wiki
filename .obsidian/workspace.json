@@ -201,14 +201,20 @@
   },
   "active": "578216117e12d62f",
   "lastOpenFiles": [
-    "docs/index.md",
-    "docs",
-    "mkdoc.yml",
-    "무제 1.base",
+    "site/search/search_index.json",
+    "site/search",
+    "site/index.html",
+    "site/sitemap.xml.gz",
+    "site/sitemap.xml",
+    "site/404.html",
+    "site/assets/stylesheets/palette.ab4e12ef.min.css.map",
+    "site/assets/stylesheets/palette.ab4e12ef.min.css",
+    "site/assets/stylesheets/main.484c7ddc.min.css.map",
+    "site/assets/stylesheets/main.484c7ddc.min.css",
+    "site/assets/stylesheets",
+    "site/assets/images/favicon.png",
     "환영합니다!.md",
-    "requirements.txt",
-    "mkdoc.yaml",
-    "무제.base",
+    "docs/index.md",
     "무제.md"
   ]
 }
