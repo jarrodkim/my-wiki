@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f090ac02b6beed0f",
+        "id": "e50395f19d31e29b",
         "type": "tabs",
         "children": [
           {
-            "id": "578216117e12d62f",
+            "id": "eccc837c12922f26",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,22 +19,6 @@
               },
               "icon": "lucide-file",
               "title": "index"
-            }
-          }
-        ]
-      },
-      {
-        "id": "e50395f19d31e29b",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "eccc837c12922f26",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "그래프 뷰"
             }
           }
         ]
@@ -199,8 +183,13 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "578216117e12d62f",
+  "active": "eccc837c12922f26",
   "lastOpenFiles": [
+    "docs/obsidian/directory.md",
+    "docs/obsidian/main.md",
+    "docs/index.md",
+    "무제 1.base",
+    "무제.base",
     "site/search/search_index.json",
     "site/search",
     "site/obsidian/main/index.html",
@@ -209,15 +198,9 @@
     "site/obsidian/directory",
     "site/obsidian",
     "site/mlops/index.html",
-    "site/mlops",
-    "site/linux/introduce/index.html",
-    "site/linux/introduce",
     "site/assets/images/favicon.png",
-    "docs/obsidian/main.md",
     "docs/linux/introduce.md",
     "docs/mlops/index.md",
-    "2026-01-29.md",
-    "docs/index.md",
-    "docs/obsidian/directory.md"
+    "2026-01-29.md"
   ]
 }

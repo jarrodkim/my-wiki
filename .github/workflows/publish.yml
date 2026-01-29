@@ -1,0 +1,17 @@
+name: publish site
+on:
+  push:
+    branches:
+      - main  # 만약 브랜치가 master라면 여기를 master로 고치세요
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+      - run: pip install -r requirements.txt
+      - run: mkdocs gh-deploy --force
