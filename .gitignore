@@ -1,0 +1,10 @@
+# [필수] 옵시디언 개인 설정 폴더 제외
+.obsidian/
+
+# [필수] MkDocs 빌드 결과물 제외
+site/
+
+# [기타] 시스템 파일 및 파이썬 캐시
+.DS_Store
+__pycache__/
+*.py[cod]
