@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/mlops/index.md",
+                "file": "docs/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/mlops/index.md",
+                "file": "docs/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/mlops/index.md",
+                "file": "docs/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -172,7 +172,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/mlops/index.md",
+                "file": "docs/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -199,25 +199,24 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "578216117e12d62f",
+  "active": "66202d4a57f90285",
   "lastOpenFiles": [
-    "site/mlops/index.html",
-    "site/mlops",
-    "site/linux/introduce/index.html",
-    "site/linux/introduce",
-    "site/linux",
+    "docs/obsidian/main.md",
     "docs/linux/introduce.md",
     "docs/mlops/index.md",
-    "2026-01-29.md",
+    "site/search/search_index.json",
+    "site/search",
     "site/obsidian/main/index.html",
     "site/obsidian/main",
     "site/obsidian/directory/index.html",
     "site/obsidian/directory",
     "site/obsidian",
+    "site/mlops/index.html",
+    "site/mlops",
+    "site/linux/introduce/index.html",
+    "site/assets/images/favicon.png",
+    "2026-01-29.md",
     "docs/index.md",
-    "docs/obsidian/directory.md",
-    "docs/obsidian/main.md",
-    "docs/obsidian",
-    "site/assets/images/favicon.png"
+    "docs/obsidian/directory.md"
   ]
 }
