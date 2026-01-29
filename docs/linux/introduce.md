@@ -8,4 +8,4 @@ python
 
 # 이미지 테스트
 
-![](Pasted_image_20260129175949.png)
+![](./images/Pasted_image_20260129175949.png)
