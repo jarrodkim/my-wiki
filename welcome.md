@@ -212,3 +212,9 @@ mkdocs-roamlinks-plugin
 - **Build and deployment** 섹션의 **Branch** 항목을 확인하세요.
     
 - **None**으로 되어 있다면 **`gh-pages`**로 바꾸고 **Save**를 누르시면 해결됩니다.****
+
+
+### 실행
+```
+python -m mkdocs build
+```

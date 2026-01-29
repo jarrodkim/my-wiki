@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "welcome.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -201,8 +201,8 @@
   },
   "active": "578216117e12d62f",
   "lastOpenFiles": [
-    "2026-01-29.md",
     "welcome.md",
+    "2026-01-29.md",
     "site/search/search_index.json",
     "site/search",
     "site/index.html",
