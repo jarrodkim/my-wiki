@@ -199,20 +199,21 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "66202d4a57f90285",
+  "active": "578216117e12d62f",
   "lastOpenFiles": [
-    "docs/welcome.md",
-    "2026-01-29.md",
     "site/search/search_index.json",
     "site/search",
+    "site/welcome/index.html",
+    "site/welcome",
     "site/index.html",
     "site/sitemap.xml.gz",
     "site/sitemap.xml",
     "site/404.html",
+    "docs/welcome.md",
+    "2026-01-29.md",
     "site/assets/stylesheets/palette.ab4e12ef.min.css.map",
     "site/assets/stylesheets/palette.ab4e12ef.min.css",
     "site/assets/stylesheets/main.484c7ddc.min.css.map",
-    "site/assets/stylesheets/main.484c7ddc.min.css",
     "site/assets/images/favicon.png",
     "docs/index.md",
     "무제.md"
