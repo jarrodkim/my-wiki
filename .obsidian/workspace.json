@@ -10,15 +10,17 @@
           {
             "id": "eccc837c12922f26",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/index.md",
-                "mode": "source",
+                "file": "docs/linux/introduce.md",
+                "mode": "preview",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "index"
+              "title": "introduce"
             }
           }
         ]
@@ -94,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/index.md",
+                "file": "docs/linux/introduce.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +106,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "index 의 백링크"
+              "title": "introduce 의 백링크"
             }
           },
           {
@@ -113,12 +115,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/index.md",
+                "file": "docs/linux/introduce.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "index 의 나가는 링크"
+              "title": "introduce 의 나가는 링크"
             }
           },
           {
@@ -156,13 +158,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/index.md",
+                "file": "docs/linux/introduce.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "index 의 개요"
+              "title": "introduce 의 개요"
             }
           }
         ]
@@ -185,11 +187,6 @@
   },
   "active": "eccc837c12922f26",
   "lastOpenFiles": [
-    "docs/obsidian/directory.md",
-    "docs/obsidian/main.md",
-    "docs/index.md",
-    "무제 1.base",
-    "무제.base",
     "site/search/search_index.json",
     "site/search",
     "site/obsidian/main/index.html",
@@ -198,7 +195,14 @@
     "site/obsidian/directory",
     "site/obsidian",
     "site/mlops/index.html",
+    "site/mlops",
+    "site/linux/introduce/index.html",
+    "site/linux/introduce",
     "site/assets/images/favicon.png",
+    "Pasted image 20260129172109.png",
+    "docs/index.md",
+    "docs/obsidian/directory.md",
+    "docs/obsidian/main.md",
     "docs/linux/introduce.md",
     "docs/mlops/index.md",
     "2026-01-29.md"
