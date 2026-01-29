@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/linux/introduce.md",
+                "file": "docs/obsidian/image 넣기.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "introduce"
+              "title": "image 넣기"
             }
           }
         ]
@@ -74,12 +74,11 @@
               "title": "북마크"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300.5
   },
   "right": {
     "id": "df344150e230ba96",
@@ -95,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/linux/introduce.md",
+                "file": "docs/obsidian/image 넣기.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "introduce 의 백링크"
+              "title": "image 넣기 의 백링크"
             }
           },
           {
@@ -114,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/linux/introduce.md",
+                "file": "docs/obsidian/image 넣기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "introduce 의 나가는 링크"
+              "title": "image 넣기 의 나가는 링크"
             }
           },
           {
@@ -157,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/linux/introduce.md",
+                "file": "docs/obsidian/image 넣기.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "introduce 의 개요"
+              "title": "image 넣기 의 개요"
             }
           }
         ]
@@ -190,21 +189,24 @@
     "site/search",
     "site/obsidian/main/index.html",
     "site/obsidian/main",
+    "site/obsidian/image 넣기/index.html",
+    "site/obsidian/image 넣기",
     "site/obsidian/directory/index.html",
     "site/obsidian/directory",
     "site/obsidian",
     "site/mlops/index.html",
     "site/mlops",
-    "site/linux/introduce/index.html",
-    "site/linux/introduce",
     "site/assets/images/favicon.png",
+    "docs/mlops/index.md",
+    "docs/obsidian/image 넣기.md",
+    "docs/index.md",
+    "무제.canvas",
+    "docs/linux/introduce.md",
+    "images/Pasted image 20260129173358.png",
     "images/Pasted image 20260129172901.png",
     "Pasted image 20260129172109.png",
-    "docs/index.md",
     "docs/obsidian/directory.md",
     "docs/obsidian/main.md",
-    "docs/linux/introduce.md",
-    "docs/mlops/index.md",
     "2026-01-29.md"
   ]
 }
