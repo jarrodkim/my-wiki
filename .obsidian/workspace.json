@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "docs/linux/introduce.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -185,6 +185,8 @@
   },
   "active": "eccc837c12922f26",
   "lastOpenFiles": [
+    "docs/images/Pasted_image_20260129175949.png",
+    "docs/linux/introduce.md",
     "2026-01-29.md",
     "site/search/search_index.json",
     "site/search",
@@ -198,8 +200,6 @@
     "site/mlops/index.html",
     "site/assets/images/favicon.png",
     "site/images/Pasted image 20260129175949.png",
-    "docs/linux/introduce.md",
-    "docs/images/Pasted image 20260129175949.png",
     "docs/obsidian/directory.md",
     "docs/obsidian/image.md",
     "docs/obsidian/main.md",
