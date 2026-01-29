@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "환영합니다!.md",
+                "file": "welcome.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "환영합니다!"
+              "title": "welcome"
             }
           }
         ]
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "환영합니다!.md",
+                "file": "welcome.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "환영합니다! 의 백링크"
+              "title": "welcome 의 백링크"
             }
           },
           {
@@ -129,12 +129,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "환영합니다!.md",
+                "file": "welcome.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "환영합니다! 의 나가는 링크"
+              "title": "welcome 의 나가는 링크"
             }
           },
           {
@@ -172,13 +172,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "환영합니다!.md",
+                "file": "welcome.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "환영합니다! 의 개요"
+              "title": "welcome 의 개요"
             }
           }
         ]
@@ -201,6 +201,8 @@
   },
   "active": "578216117e12d62f",
   "lastOpenFiles": [
+    "2026-01-29.md",
+    "welcome.md",
     "site/search/search_index.json",
     "site/search",
     "site/index.html",
@@ -211,9 +213,7 @@
     "site/assets/stylesheets/palette.ab4e12ef.min.css",
     "site/assets/stylesheets/main.484c7ddc.min.css.map",
     "site/assets/stylesheets/main.484c7ddc.min.css",
-    "site/assets/stylesheets",
     "site/assets/images/favicon.png",
-    "환영합니다!.md",
     "docs/index.md",
     "무제.md"
   ]
