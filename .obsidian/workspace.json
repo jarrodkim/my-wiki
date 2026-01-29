@@ -199,7 +199,7 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "66202d4a57f90285",
+  "active": "578216117e12d62f",
   "lastOpenFiles": [
     "site/search/search_index.json",
     "site/search",
@@ -212,10 +212,10 @@
     "site/mlops",
     "site/linux/introduce/index.html",
     "site/linux/introduce",
+    "site/assets/images/favicon.png",
     "docs/obsidian/main.md",
     "docs/linux/introduce.md",
     "docs/mlops/index.md",
-    "site/assets/images/favicon.png",
     "2026-01-29.md",
     "docs/index.md",
     "docs/obsidian/directory.md"
