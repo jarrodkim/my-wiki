@@ -22,7 +22,7 @@ theme:
         icon: material/brightness-4
         name: 라이트 모드로 전환
   features:
-    - navigation.tabs      # 상단 탭 네비게이션
+  #  - navigation.tabs      # 상단 탭 네비게이션
     - navigation.top       # '맨 위로' 버튼
     - navigation.indexes   # 폴더 클릭 시 index.md 보여주기
     - content.code.copy    # 코드 복사 버튼
