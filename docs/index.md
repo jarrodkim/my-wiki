@@ -7,3 +7,4 @@
 - [[IT_Infrastructure]]
 - [[MLOps]]
 - [[Daily_Notes]]
+- [[사전학습]
