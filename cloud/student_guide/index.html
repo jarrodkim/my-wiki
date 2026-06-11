@@ -1,0 +1,2345 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jarrodkim.github.io/my-wiki/cloud/student_guide/">
+      
+      
+        <link rel="prev" href="../readme/">
+      
+      
+        <link rel="next" href="../../linux/introduce/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>📖 [특강 교안] 클라우드 인프라의 진화 - jarrodkim 의 Wiki 입니다</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../.." title="jarrodkim 의 Wiki 입니다" class="md-header__button md-logo" aria-label="jarrodkim 의 Wiki 입니다" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            jarrodkim 의 Wiki 입니다
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📖 [특강 교안] 클라우드 인프라의 진화
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jarrodkim/my-wiki" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="jarrodkim 의 Wiki 입니다" class="md-nav__button md-logo" aria-label="jarrodkim 의 Wiki 입니다" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    jarrodkim 의 Wiki 입니다
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jarrodkim/my-wiki" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    환영합니다!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloud
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cloud
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../readme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Readme
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 [특강 교안] 클라우드 인프라의 진화
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 [특강 교안] 클라우드 인프라의 진화
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 학습 목표
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗺️ 특강 전체 로드맵 (Lecture Roadmap)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-vm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💻 제1부. 인프라 가상화의 역사 (VM부터 컨테이너까지)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💻 제1부. 인프라 가상화의 역사 (VM부터 컨테이너까지)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-vm-vs-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 가상머신(VM) vs 클라우드 인스턴스(Instance)의 실체적 차이
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-vm-vs-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 가상머신(VM) vs 컨테이너(Container) 구조적 비교
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚙️ 제2부. 운영 자동화와 컨테이너 오케스트레이션
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ 제2부. 운영 자동화와 컨테이너 오케스트레이션">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-docker-vs-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 도커(Docker) vs 쿠버네티스(Kubernetes) 차이
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 고급 아키텍처: 쿠버네티스의 인프라 추상화와 3대 표준 인터페이스
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 고급 아키텍처: 쿠버네티스의 인프라 추상화와 3대 표준 인터페이스">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-hypervisor-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 물리 서버 vs Hypervisor 가상화 vs 쿠버네티스 표준 인터페이스 매핑 비교
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vsphere-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 심화 비교. vSphere와 Kubernetes: 오케스트레이션 대상의 차이
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚦 쿠버네티스와 자원 관리: 자동화 이후에도 남는 책임
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desired-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔁 오케스트레이션이 자동화하는 것: Desired State 제어 루프
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-devops-aiops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ 제3부. DevOps와 AIOps: 운영 자동화의 확장
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ 제3부. DevOps와 AIOps: 운영 자동화의 확장">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-devops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. DevOps: 코드에서 운영까지 이어지는 자동화 루프
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-aiops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. AIOps: 관측 데이터에서 운영 판단 자동화로
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-devops-aiops_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. DevOps와 AIOps의 연결
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-review-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 자가 학습 퀴즈 (Self-Review Quiz)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Linux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/introduce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduce
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mlops/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mlops
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mlops
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Obsidian
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Obsidian
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../obsidian/directory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Directory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../obsidian/image/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Image
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../obsidian/main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Main
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    머신러닝
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    머신러닝
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/1%EC%9E%A5.%20%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%2C%20%EB%94%A5%EB%9F%AC%EB%8B%9D%EC%9D%98%20%EC%A3%BC%EC%9A%94%20%EA%B0%9C%EB%85%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1장. 머신러닝, 딥러닝의 주요 개념
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/2%EC%9E%A5.%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%A0%84%EC%B2%98%EB%A6%AC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2장. 데이터 전처리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/3%EC%9E%A5.%20%EC%A7%80%EB%8F%84%ED%95%99%EC%8A%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3장. 지도학습
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/4%EC%9E%A5.%20%EB%B9%84%EC%A7%80%EB%8F%84%ED%95%99%EC%8A%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4장. 비지도학습
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/5%EC%9E%A5.%20%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%EC%9D%98%20%EC%84%B1%EB%8A%A5%20%EA%B0%9C%EC%84%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5장. 머신러닝의 성능 개선
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/6%EC%9E%A5.%20%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%20%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6장. 머신러닝 연습문제
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/7%EC%9E%A5.%20%EB%94%A5%EB%9F%AC%EB%8B%9D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7장. 딥러닝
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/8%EC%9E%A5.%20CNN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8장. CNN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/9%EC%9E%A5.%20RNN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9장. RNN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%EC%82%AC%EC%A0%84%ED%95%99%EC%8A%B5/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사전학습
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    사전학습
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EC%82%AC%EC%A0%84%ED%95%99%EC%8A%B5/01%EC%9D%BC%EC%B0%A8_Markdown_GitHub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1일차: Markdown 및 첫 GitHub 저장소 생성
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EC%82%AC%EC%A0%84%ED%95%99%EC%8A%B5/02%EC%9D%BC%EC%B0%A8_%ED%8C%8C%EC%9D%B4%EC%8D%AC%EA%B8%B0%EC%B4%88_%ED%99%98%EA%B2%BD%EC%A4%80%EB%B9%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2일차: 파이썬 기초 및 실습 환경 준비
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EC%82%AC%EC%A0%84%ED%95%99%EC%8A%B5/03%EC%9D%BC%EC%B0%A8_JSON_%EC%9D%B4%ED%95%B4%EB%B0%8F%EC%84%A4%EA%B3%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3일차: 데이터의 이름표, JSON 형식 이해 및 설계
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EC%82%AC%EC%A0%84%ED%95%99%EC%8A%B5/04%EC%9D%BC%EC%B0%A8_API%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%88%98%EC%A7%91_Git%EA%B8%B0%EB%A1%9D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4일차: 실시간 데이터 수집 및 결과물 Git에 기록하기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EC%82%AC%EC%A0%84%ED%95%99%EC%8A%B5/05%EC%9D%BC%EC%B0%A8_%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9B%90%EB%A6%AC_%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80%EC%88%98%EC%A0%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5일차: 브라우저 원리 이해 및 웹 페이지 수정 실습
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EC%82%AC%EC%A0%84%ED%95%99%EC%8A%B5/06%EC%9D%BC%EC%B0%A8_%EA%B0%80%EC%83%81%EB%A8%B8%EC%8B%A0_OS%EA%B5%AC%EC%84%B1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6일차: 가상머신(VM) 설치 및 OS 구성
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EC%82%AC%EC%A0%84%ED%95%99%EC%8A%B5/07%EC%9D%BC%EC%B0%A8_%EC%9B%B9%EC%84%9C%EB%B2%84_GitHubDesktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7일차: 웹서버 만들어보기 및 GitHub Desktop을 활용한 코드 동기화
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EC%82%AC%EC%A0%84%ED%95%99%EC%8A%B5/08%EC%9D%BC%EC%B0%A8_%ED%85%9C%ED%94%8C%EB%A6%BF_%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%97%B0%EA%B2%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8일차: 템플릿 데이터 연결하여 만들어보기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EC%82%AC%EC%A0%84%ED%95%99%EC%8A%B5/09%EC%9D%BC%EC%B0%A8_%EB%A6%AC%EB%88%85%EC%8A%A4%EB%AA%85%EB%A0%B9%EC%96%B4_Git%EC%88%99%EB%8B%AC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9일차: 리눅스 핵심 명령어 및 터미널 환경 Git 숙달
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EC%82%AC%EC%A0%84%ED%95%99%EC%8A%B5/11%EC%9D%BC%EC%B0%A8_Streamlit_%EC%9E%90%EB%8F%99%EB%B0%B0%ED%8F%AC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11일차: 파이썬 앱 제작 및 GitHub 연동 자동 배포
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EC%82%AC%EC%A0%84%ED%95%99%EC%8A%B5/12%EC%9D%BC%EC%B0%A8_%EC%82%AC%EC%A0%84%EA%B5%90%EC%9C%A1%EB%A7%88%EB%AC%B4%EB%A6%AC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12일차: 사전교육 마지막날 이벤트
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 학습 목표
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗺️ 특강 전체 로드맵 (Lecture Roadmap)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-vm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💻 제1부. 인프라 가상화의 역사 (VM부터 컨테이너까지)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💻 제1부. 인프라 가상화의 역사 (VM부터 컨테이너까지)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-vm-vs-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 가상머신(VM) vs 클라우드 인스턴스(Instance)의 실체적 차이
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-vm-vs-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 가상머신(VM) vs 컨테이너(Container) 구조적 비교
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚙️ 제2부. 운영 자동화와 컨테이너 오케스트레이션
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ 제2부. 운영 자동화와 컨테이너 오케스트레이션">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-docker-vs-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 도커(Docker) vs 쿠버네티스(Kubernetes) 차이
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 고급 아키텍처: 쿠버네티스의 인프라 추상화와 3대 표준 인터페이스
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 고급 아키텍처: 쿠버네티스의 인프라 추상화와 3대 표준 인터페이스">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-hypervisor-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 물리 서버 vs Hypervisor 가상화 vs 쿠버네티스 표준 인터페이스 매핑 비교
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vsphere-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 심화 비교. vSphere와 Kubernetes: 오케스트레이션 대상의 차이
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚦 쿠버네티스와 자원 관리: 자동화 이후에도 남는 책임
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desired-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔁 오케스트레이션이 자동화하는 것: Desired State 제어 루프
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-devops-aiops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ 제3부. DevOps와 AIOps: 운영 자동화의 확장
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ 제3부. DevOps와 AIOps: 운영 자동화의 확장">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-devops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. DevOps: 코드에서 운영까지 이어지는 자동화 루프
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-aiops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. AIOps: 관측 데이터에서 운영 판단 자동화로
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-devops-aiops_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. DevOps와 AIOps의 연결
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-review-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 자가 학습 퀴즈 (Self-Review Quiz)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">📖 [특강 교안] 클라우드 인프라의 진화</h1>
+<blockquote>
+<p>本 교안은 클라우드 가상화 기술의 발전사(물리 서버 → 가상머신 → 클라우드 인스턴스 → 컨테이너)와 분산 클러스터를 조율하는 컨테이너 오케스트레이션 플랫폼인 쿠버네티스(Kubernetes)의 핵심 설계 사상을 다룹니다. 최신 발표안 기준으로 vSphere와 Kubernetes의 오케스트레이션 대상 비교, DevOps/AIOps로 확장되는 운영 자동화 흐름, 그리고 오케스트레이션의 Desired State 제어 루프까지 함께 정리합니다.</p>
+</blockquote>
+<hr />
+<h2 id="_2">🎯 학습 목표</h2>
+<ol>
+<li>클라우드 컴퓨팅의 기본 구성 요소인 4대 자원(CPU, RAM, 스토리지, 네트워크)이 가상화되는 흐름을 설명할 수 있습니다.</li>
+<li>가상머신(VM)과 클라우드 인스턴스(Cloud Instance)의 제어권 및 자동화 관점에서의 차이점을 규명합니다.</li>
+<li>가상머신과 컨테이너(Container)의 아키텍처 구조적 차이점과 성능상의 장단점을 명확히 비교할 수 있습니다.</li>
+<li>컨테이너 '실행기'인 도커(Docker)와 분산 클러스터 '지휘자'인 쿠버네티스(Kubernetes)의 스코프 차이를 설명할 수 있습니다.</li>
+<li>쿠버네티스가 하부 이기종 인프라 자원을 추상화하기 위해 제공하는 3대 표준 인터페이스(CRI, CNI, CSI)를 물리 서버 인터페이스와 매핑하여 고찰할 수 있습니다.</li>
+<li>오케스트레이션 환경에서도 여전히 개발자에게 과제로 남겨진 명시적 자원 관리(Sizing)와 가용성 설계 딜레마를 분석합니다.</li>
+<li>vSphere와 Kubernetes를 비교하여 VM 오케스트레이션과 컨테이너 오케스트레이션의 대상 차이를 구분합니다.</li>
+<li>DevOps와 AIOps가 배포 자동화와 운영 판단 자동화로 연결되는 흐름을 설명합니다.</li>
+<li>Kubernetes 오케스트레이션을 Desired State, Current State, Reconcile 관점의 자동 제어 루프로 이해합니다.</li>
+</ol>
+<hr />
+<h2 id="lecture-roadmap">🗺️ 특강 전체 로드맵 (Lecture Roadmap)</h2>
+<p>컴퓨팅 환경의 발전은 하드웨어를 효율적으로 쪼개고 경량으로 팩킹하는 <strong>'자원 격리 가상화'</strong>에서 시작하여, 격리된 수많은 컴포넌트들을 유기적으로 배치하고 자동 복구하는 <strong>'운영 오케스트레이션'</strong>으로 진화해 왔습니다. 그 다음 단계에서는 배포 흐름을 자동화하는 <strong>DevOps</strong>, 운영 신호를 분석해 판단을 돕는 <strong>AIOps</strong>로 확장됩니다.</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph Part1["[제1부] 인프라 가상화의 역사 (자원 격리)"]
+        A["물리 서버 (Physical)&lt;br/&gt;HW 실제 장비 직접 소유·운영"]
+        --&gt; B["가상머신 (VM)&lt;br/&gt;Hypervisor 분할 / Guest OS 컴퓨터 가상화"]
+        --&gt; C["클라우드 인스턴스 (Instance)&lt;br/&gt;Hypervisor 가상화 + API 관리 자동화 결합"]
+        --&gt; D["컨테이너 (Container)&lt;br/&gt;Host OS 커널 공유 / 경량 프로세스 격리"]
+    end
+
+    subgraph Part2["[제2부] 운영 자동화의 탄생 (오케스트레이션)"]
+        D --&gt; E["도커 (Docker)&lt;br/&gt;단일 호스트 중심 컨테이너 빌드 &amp; 실행기"]
+        --&gt; F["쿠버네티스 (Kubernetes)&lt;br/&gt;다중 호스트 클러스터 통합 조율 / CRI·CNI·CSI 추상화"]
+    end
+
+    subgraph Part3["[제3부] 운영 자동화의 확장 (DevOps &amp; AIOps)"]
+        F --&gt; G["DevOps&lt;br/&gt;CI/CD · IaC · Monitoring Feedback"]
+        --&gt; H["AIOps&lt;br/&gt;Logs · Metrics · Traces 분석 기반 운영 판단 자동화"]
+    end
+
+    style Part1 fill:#f5f5f5,stroke:#999,stroke-width:1px
+    style Part2 fill:#eaf2f8,stroke:#5dade2,stroke-width:1px
+    style Part3 fill:#fff7e6,stroke:#d4af37,stroke-width:1px</code></pre>
+<hr />
+<h2 id="1-vm">💻 제1부. 인프라 가상화의 역사 (VM부터 컨테이너까지)</h2>
+<p>컴퓨팅 환경의 발전사는 결국 하드웨어의 4대 물리적 자원(<strong>CPU, RAM, Storage, Network</strong>)을 가상화 계층을 거쳐 사용자에게 어떻게 분배하고 효율적으로 격리하여 제공하느냐의 가상화 역사입니다.</p>
+<h3 id="1-vm-vs-instance">1. 가상머신(VM) vs 클라우드 인스턴스(Instance)의 실체적 차이</h3>
+<p>흔히 클라우드 가상 서버를 가상머신(VM)과 동일하게 혼용하지만, 컴퓨터 아키텍처 및 시스템 엔지니어링 관점에서는 명확한 설계상 차이가 존재합니다.</p>
+<ul>
+<li><strong>가상머신 (Virtual Machine - 인프라 수준)</strong>:<ul>
+<li><strong>개념</strong>: 하나의 물리 하드웨어 위에 하이퍼바이저(Hypervisor)를 직접 설치하여 리소스를 분할하고 독립된 Guest OS를 구동하는 가상화의 '기술적 실체'입니다.</li>
+<li><strong>제어 수준</strong>: 관리자가 하이퍼바이저 셋업, 가상 CPU/RAM 수동 할당, 가상 디스크 포맷(vmdk, qcow2 등), 가상 NIC 매핑, OS 설치 및 가상 드라이버 설정을 직접 수동으로 제어해야 하므로, 유연성이 상대적으로 낮습니다. (예: 사내 서버실에 VMware ESXi나 KVM을 깔아 VM을 만드는 작업)</li>
+</ul>
+</li>
+<li><strong>클라우드 인스턴스 (Cloud Instance - API 수준)</strong>:<ul>
+<li><strong>개념</strong>: 기술적 가상화 실체는 Hypervisor 기반의 가상머신(VM)과 동일하지만, 클라우드 제공업체(AWS, GCP 등)가 <strong>"대규모 제어 및 프로비저닝 자동화 API (Control Plane)"</strong>를 씌워 완벽히 추상화한 형태입니다.</li>
+<li><strong>차이점</strong>:<ol>
+<li><strong>API 기반 온디맨드 제어</strong>: 하이퍼바이저 수준을 의식하지 않고 마우스 클릭이나 CLI 명령(API 호출) 단 한 번으로 수 분 내에 가상 서버를 가동합니다.</li>
+<li><strong>디커플링(Decoupling)</strong>: 컴퓨터 본체와 스토리지(EBS 등 블록 스토리지), 가상 네트워크 인터페이스(vNIC), 방화벽(보안 그룹)이 완전히 분리되어 있어 기동 중에 유기적으로 부착 및 분리가 가능합니다.</li>
+<li><strong>탄력적 오토스케일링</strong>: 모니터링 API(CloudWatch 등)와 결합하여 트래픽에 맞춰 실시간으로 수십, 수백 대의 인스턴스를 자동 증설 및 소멸(Elasticity)할 수 있습니다.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-vm-vs-container">2. 가상머신(VM) vs 컨테이너(Container) 구조적 비교</h3>
+<ul>
+<li><strong>VM</strong>: <strong>"컴퓨터"</strong>를 가상화합니다. 무거운 Guest OS가 구동되어 시작에 수 분이 걸리며 상당한 시스템 리소스 오버헤드를 가집니다.</li>
+<li><strong>Container</strong>: OS를 가상화하는 대신, <strong>"프로세스"</strong>를 격리합니다. Guest OS가 없이 호스트의 OS Kernel을 공유하며 리눅스 커널의 <code>Namespace</code>(격리)와 <code>cgroup</code>(자원 제한) 제어 기술을 통해 구동되어 수 밀리초(ms) 만에 즉시 실행됩니다.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">비교 항목</th>
+<th style="text-align: left;">가상머신 (Virtual Machine)</th>
+<th style="text-align: left;">컨테이너 (Container)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>추상화 대상</strong></td>
+<td style="text-align: left;"><strong>컴퓨터</strong> 전체를 가상화</td>
+<td style="text-align: left;"><strong>프로세스</strong> 애플리케이션 격리</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>운영체제(OS)</strong></td>
+<td style="text-align: left;">각 VM마다 무거운 <strong>Guest OS</strong> 탑재</td>
+<td style="text-align: left;">Guest OS 없음, <strong>Host OS 커널 공유</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>자원 격리 방식</strong></td>
+<td style="text-align: left;">하이퍼바이저(Hypervisor) 논리 격리</td>
+<td style="text-align: left;">리눅스 Namespace / cgroup 격리</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>메모리 오버헤드</strong></td>
+<td style="text-align: left;">OS 구동으로 인해 기본 수 GB 소모</td>
+<td style="text-align: left;">격리 프로세스 구동에 필요한 수 MB만 소모</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>기동 속도</strong></td>
+<td style="text-align: left;">OS 부팅 프로세스로 인해 <strong>수 분 소요</strong></td>
+<td style="text-align: left;">OS 부팅이 불필요하여 <strong>수 밀리초(ms) 소요</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>스토리지 방식</strong></td>
+<td style="text-align: left;">독립된 고정 크기 가상 디스크 파일</td>
+<td style="text-align: left;">효율적인 <strong>유니온 파일 시스템 (UnionFS)</strong> 공유</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2">⚙️ 제2부. 운영 자동화와 컨테이너 오케스트레이션</h2>
+<h3 id="1-docker-vs-kubernetes">1. 도커(Docker) vs 쿠버네티스(Kubernetes) 차이</h3>
+<p>컨테이너 기반 인프라를 다룰 때 가장 많이 혼동하는 개념이지만, 둘은 담당하는 <strong>영역(Scope)과 스케일(Scale)</strong>이 완전히 다른 상호보완적 관계입니다.</p>
+<ul>
+<li><strong>도커 (Docker) - "단일 호스트(컴퓨터) 내부의 컨테이너 빌더 &amp; 실행기"</strong>:<ul>
+<li><strong>역할</strong>: 개발한 애플리케이션 코드를 독립된 컨테이너 이미지로 포장(Build)하고, <strong>단 하나의 서버 내부</strong>에서 컨테이너를 구동(Run), 중지, 삭제하는 도구입니다.</li>
+<li><strong>한계</strong>: 서버 장비가 여러 대(Multi-node)로 확장되면 도커 단독으로는 <em>"어느 서버의 자원이 남는지 분석하여 컨테이너를 지능적으로 분산 배치"</em> 하거나, <em>"장애가 난 노드의 컨테이너를 다른 노드로 자동 이사시키기(Scheduling)"</em>, <em>"여러 서버에 흩어진 컨테이너 간의 통신"</em> 등을 자동 제어할 수 없습니다.</li>
+</ul>
+</li>
+<li><strong>쿠버네티스 (Kubernetes) - "다중 호스트(클러스터)의 분산 컨테이너 오케스트레이터"</strong>:<ul>
+<li><strong>역할</strong>: 여러 대의 물리/가상 서버를 하나의 거대한 가상의 컴퓨팅 자원 풀(클러스터)로 통합하고, 그 위에서 수천 개의 컨테이너들의 분산 배치, 장애 자동 복구(Self-healing), 동적 로드밸런싱, 수평 확장(Auto-scaling)을 총괄 관리하는 <strong>인프라의 중앙 사령탑(두뇌)</strong>입니다.</li>
+<li><em>비유</em>: 도커가 악기 소리를 내는 개별 <strong>바이올린 연주자</strong>라면, 쿠버네티스는 수많은 연주자들의 템포와 위치를 지휘하여 웅장한 교향곡을 완성하는 <strong>오케스트라 지휘자</strong>입니다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-3">2. 고급 아키텍처: 쿠버네티스의 인프라 추상화와 3대 표준 인터페이스</h3>
+<p>컴퓨터 운영체제(OS)가 하드웨어를 추상화하기 위해 디바이스 드라이버 규격을 정의하듯, <strong>쿠버네티스는 분산 클러스터 인프라를 추상화</strong>하기 위해 3대 핵심 표준 인터페이스 규격을 제공합니다.</p>
+<p>이 인터페이스 규격 덕분에 쿠버네티스는 하부 인프라(물리 장비 종류, 가상화 환경 종류)에 종속되지 않고 완벽하게 이식 가능한 분산 시스템을 구축할 수 있습니다.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>       ┌─────────────────────────────────────────────────────────┐
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>       │                       쿠버네티스                        │
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>       └──────────────────────────┬──────────────────────────────┘
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>              ┌───────────────────┼───────────────────┐
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>              ▼                   ▼                   ▼
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>           [ CRI ]             [ CNI ]             [ CSI ]
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>      런타임 인터페이스   네트워크 인터페이스   스토리지 인터페이스
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>              │                   │                   │
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>         containerd            Calico              AWS EBS
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>           CRI-O               Flannel              Ceph
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>       (컨테이너 구동)      (가상 네트워크)       (디스크 볼륨)
+</code></pre></div>
+<ol>
+<li><strong>CRI (Container Runtime Interface - 컴퓨팅 가상화 추상화)</strong>:<ul>
+<li><strong>개념</strong>: 컨테이너의 생성, 실행, 삭제를 담당하는 엔진과의 통신 규격을 인터페이스화한 것입니다.</li>
+<li><strong>역할</strong>: 과거 도커 전용이었던 결합을 깨고, <code>containerd</code>, <code>CRI-O</code> 등 표준 OCI 규격을 따르는 다양한 경량 컨테이너 런타임 엔진을 플러그인 형태로 유연하게 교체 및 연동할 수 있게 합니다.</li>
+</ul>
+</li>
+<li><strong>CNI (Container Network Interface - 네트워크 가상화 추상화)</strong>:<ul>
+<li><strong>개념</strong>: 컨테이너가 생성될 때 가상 네트워크 인터페이스를 연결하고 IP 주소를 할당하는 통신 규격입니다.</li>
+<li><strong>역할</strong>: 서로 다른 물리 서버에 구동 중인 컨테이너들이 마치 하나의 동일 네트워크 대역에 존재하는 것처럼 연결해 줍니다. Calico, Flannel, AWS-VPC CNI 등 다양한 고성능 가상 네트워크 플러그인을 결합할 수 있습니다.</li>
+</ul>
+</li>
+<li><strong>CSI (Container Storage Interface - 스토리지 가상화 추상화)</strong>:<ul>
+<li><strong>개념</strong>: 컨테이너가 데이터를 영구 보존하기 위해 외부 스토리지 볼륨을 마운트하고 분리하는 스토리지 드라이버 인터페이스 규격입니다.</li>
+<li><strong>역할</strong>: 이기종 스토리지 벤더들이 직접 드라이버를 개발해 쿠버네티스에 붙일 수 있게 합니다. (예: AWS EBS, Google Persistent Disk, 사내 NFS, 오픈소스 Ceph 분산 스토리지 등을 코드 수정 없이 볼륨에 장착).</li>
+</ul>
+</li>
+</ol>
+<h4 id="vs-hypervisor-vs">📊 물리 서버 vs Hypervisor 가상화 vs 쿠버네티스 표준 인터페이스 매핑 비교</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">분류</th>
+<th style="text-align: left;">물리 서버 (하드웨어 수준)</th>
+<th style="text-align: left;">전통 가상화 (VM / Hypervisor)</th>
+<th style="text-align: left;">쿠버네티스 표준 인터페이스 규격</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>컴퓨팅 가상화</strong></td>
+<td style="text-align: left;">물리 CPU 및 RAM 소켓, 메인보드</td>
+<td style="text-align: left;">vCPU 할당, 하이퍼바이저 에뮬레이션</td>
+<td style="text-align: left;"><strong>CRI (Container Runtime Interface)</strong><br>• Docker/containerd 기반 경량 컨테이너 실행 추상화</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>네트워크 가상화</strong></td>
+<td style="text-align: left;">물리 랜카드(NIC), UTP 선, L2/L3 스위치</td>
+<td style="text-align: left;">가상 랜카드(vNIC), 하이퍼바이저 가상 스위치</td>
+<td style="text-align: left;"><strong>CNI (Container Network Interface)</strong><br>• Calico/Flannel 기반 컨테이너 오버레이 가상 네트워크 구축</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>스토리지 가상화</strong></td>
+<td style="text-align: left;">물리 HDD / SSD, SATA/SCSI 컨트롤러</td>
+<td style="text-align: left;">가상 디스크 파일(.vmdk 등), 가상 컨트롤러</td>
+<td style="text-align: left;"><strong>CSI (Container Storage Interface)</strong><br>• AWS EBS/NFS 등 이기종 영구 저장소 볼륨 연동 추상화</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="vsphere-kubernetes">🧭 심화 비교. vSphere와 Kubernetes: 오케스트레이션 대상의 차이</h2>
+<p>오케스트레이션은 Kubernetes만의 개념이 아닙니다. 핵심은 <strong>무엇을 조율하는가</strong>입니다. 전통 가상화 환경에서는 vSphere가 여러 ESXi 호스트 위의 VM을 배치하고 복구하는 운영 자동화 계층 역할을 해 왔고, 클라우드 네이티브 환경에서는 Kubernetes가 여러 Worker Node 위의 Pod와 Container를 배치하고 확장합니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">비교 항목</th>
+<th style="text-align: left;">vSphere / VM Orchestration</th>
+<th style="text-align: left;">Kubernetes / Container Orchestration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>오케스트레이션 대상</strong></td>
+<td style="text-align: left;">Virtual Machine</td>
+<td style="text-align: left;">Pod / Container</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>실행 기반</strong></td>
+<td style="text-align: left;">ESXi Host, Hypervisor</td>
+<td style="text-align: left;">Worker Node, Container Runtime</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>관리 계층</strong></td>
+<td style="text-align: left;">vCenter</td>
+<td style="text-align: left;">Control Plane</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>핵심 기능</strong></td>
+<td style="text-align: left;">VM 배치, HA, vMotion, DRS, 리소스 풀 관리</td>
+<td style="text-align: left;">Scheduling, Self-healing, Scaling, Service Discovery</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>운영 관점</strong></td>
+<td style="text-align: left;">Guest OS를 포함한 가상 컴퓨터 단위 운영</td>
+<td style="text-align: left;">애플리케이션 실행 단위와 배포 상태 중심 운영</td>
+</tr>
+</tbody>
+</table>
+<p>정리하면 vSphere는 <strong>VM 세계의 운영 자동화 계층</strong>, Kubernetes는 <strong>컨테이너 세계의 운영 자동화 계층</strong>입니다. 두 시스템 모두 클러스터 전체를 보고 배치와 복구를 수행하지만, vSphere는 VM을 다루고 Kubernetes는 Pod/Container를 다룬다는 차이가 있습니다.</p>
+<hr />
+<h2 id="_3">🚦 쿠버네티스와 자원 관리: 자동화 이후에도 남는 책임</h2>
+<p>Kubernetes는 컨테이너 배포를 자동화하지만, 자원의 경계까지 스스로 완벽히 결정하지는 않습니다. 개발자와 운영자는 YAML에 컨테이너가 필요로 하는 최소 자원과 최대 자원을 명시해야 합니다.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">resources</span><span class="p">:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">requests</span><span class="p">:</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500m</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">512Mi</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">limits</span><span class="p">:</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1Gi</span>
+</code></pre></div>
+<ul>
+<li><strong>requests</strong>: 스케줄러가 배치 판단에 사용하는 최소 보장 자원입니다. 예를 들어 <code>cpu: 500m</code>은 0.5 코어를 의미합니다.</li>
+<li><strong>limits</strong>: 컨테이너가 사용할 수 있는 최대 자원 경계입니다. 너무 낮게 잡으면 OOM(Out of Memory)이나 성능 저하가 발생할 수 있고, 너무 높게 잡으면 비용과 자원 낭비가 커집니다.</li>
+<li><strong>핵심 딜레마</strong>: 오케스트레이션은 배치와 복구를 자동화하지만, 서비스 특성에 맞는 Sizing과 가용성 판단은 여전히 설계자의 책임입니다.</li>
+</ul>
+<hr />
+<h2 id="desired-state">🔁 오케스트레이션이 자동화하는 것: Desired State 제어 루프</h2>
+<p>컨테이너 오케스트레이션의 본질은 컨테이너를 한 번 실행하는 것이 아니라, 전체 시스템의 상태를 사용자가 선언한 <strong>원하는 상태(Desired State)</strong>에 계속 맞추는 것입니다.</p>
+<pre class="mermaid"><code>flowchart LR
+    A["Desired State&lt;br/&gt;원하는 상태 선언"] --&gt; B["Current State&lt;br/&gt;현재 상태 관찰"]
+    B --&gt; C["Reconcile&lt;br/&gt;차이 조정"]
+    C --&gt; A
+
+    C --&gt; D["Scheduling&lt;br/&gt;노드 배치"]
+    C --&gt; E["Self-healing&lt;br/&gt;장애 복구"]
+    C --&gt; F["Scaling&lt;br/&gt;수평 확장"]
+    C --&gt; G["Service Discovery&lt;br/&gt;서비스 탐색"]
+    C --&gt; H["Rollout / Rollback&lt;br/&gt;배포와 되돌리기"]
+    C --&gt; I["Resource Control&lt;br/&gt;CPU·Memory 제어"]</code></pre>
+<p>Kubernetes는 사용자가 선언한 Deployment, Service, HPA 같은 리소스를 기준으로 현재 클러스터 상태를 계속 관찰합니다. 차이가 발생하면 Control Plane이 스케줄링, 재시작, 재배치, 확장, 라우팅 변경, 롤아웃/롤백을 수행해 원하는 상태에 다시 가까워지도록 조정합니다.</p>
+<hr />
+<h2 id="3-devops-aiops">🛠️ 제3부. DevOps와 AIOps: 운영 자동화의 확장</h2>
+<p>Kubernetes가 컨테이너 배치와 복구를 자동화한다면, DevOps와 AIOps는 운영 자동화의 범위를 더 넓힙니다. DevOps는 변경 사항을 빠르고 안전하게 운영 환경까지 보내는 흐름을 자동화하고, AIOps는 운영 중 발생하는 방대한 신호를 분석하여 장애 감지와 대응 판단을 돕습니다.</p>
+<h3 id="1-devops">1. DevOps: 코드에서 운영까지 이어지는 자동화 루프</h3>
+<p>DevOps는 단순한 도구 묶음이 아니라, 개발과 운영 사이의 지연을 줄이는 문화이자 자동화 체계입니다.</p>
+<pre class="mermaid"><code>flowchart LR
+    A["Plan / Code"] --&gt; B["Build / Test"]
+    B --&gt; C["Release / Deploy"]
+    C --&gt; D["Operate / Monitor"]
+    D --&gt; E["Feedback"]
+    E --&gt; A</code></pre>
+<ul>
+<li><strong>CI/CD</strong>: 변경 사항을 반복 가능하게 빌드, 테스트, 배포합니다.</li>
+<li><strong>IaC(Infrastructure as Code)</strong>: 인프라 구성을 코드처럼 선언하고 버전 관리합니다.</li>
+<li><strong>Monitoring Feedback</strong>: 운영 상태를 다시 개발 의사결정으로 연결합니다.</li>
+</ul>
+<h3 id="2-aiops">2. AIOps: 관측 데이터에서 운영 판단 자동화로</h3>
+<p>AIOps는 운영자를 대체하는 개념이 아니라, 사람이 모두 해석하기 어려운 로그, 메트릭, 트레이스, 이벤트를 분석해 장애 징후와 원인 후보를 빠르게 좁혀 주는 운영 지능화 계층입니다.</p>
+<pre class="mermaid"><code>flowchart LR
+    A["Logs / Metrics / Traces / Events"] --&gt; B["Anomaly Detection"]
+    B --&gt; C["Root Cause Analysis"]
+    C --&gt; D["Prediction"]
+    D --&gt; E["Recommendation / Remediation"]</code></pre>
+<ul>
+<li><strong>Anomaly Detection</strong>: 정상 패턴에서 벗어난 이상 징후를 감지합니다.</li>
+<li><strong>Root Cause Analysis</strong>: 여러 이벤트의 상관관계를 분석해 장애 원인 후보를 좁힙니다.</li>
+<li><strong>Recommendation / Remediation</strong>: 조치 후보를 추천하거나, 정책과 승인 절차 안에서 제한적으로 자동 조치를 수행합니다.</li>
+</ul>
+<h3 id="3-devops-aiops_1">3. DevOps와 AIOps의 연결</h3>
+<p>DevOps와 AIOps는 경쟁 개념이 아닙니다. DevOps가 <strong>배포 자동화의 루프</strong>라면, AIOps는 <strong>운영 판단 자동화의 루프</strong>입니다. 둘이 연결되면 변경을 빠르게 배포하고, 운영 신호를 분석해 다시 개선으로 돌려보내는 더 강한 피드백 시스템이 됩니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">구분</th>
+<th style="text-align: left;">DevOps</th>
+<th style="text-align: left;">AIOps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>초점</strong></td>
+<td style="text-align: left;">변경 사항을 안전하게 배포</td>
+<td style="text-align: left;">운영 신호를 분석해 판단 지원</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>주요 입력</strong></td>
+<td style="text-align: left;">코드, 설정, 인프라 선언</td>
+<td style="text-align: left;">로그, 메트릭, 트레이스, 이벤트</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>핵심 자동화</strong></td>
+<td style="text-align: left;">CI/CD, IaC, Release Automation</td>
+<td style="text-align: left;">이상 탐지, 이벤트 상관 분석, 원인 분석</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>결과</strong></td>
+<td style="text-align: left;">빠르고 반복 가능한 배포</td>
+<td style="text-align: left;">빠른 감지, 원인 후보 축소, 대응 추천</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="self-review-quiz">📝 자가 학습 퀴즈 (Self-Review Quiz)</h2>
+<ol>
+<li><strong>Q1</strong>: 가상머신(VM)과 클라우드 인스턴스(Cloud Instance)의 '자동화 및 탄력성' 관점에서의 본질적인 차이는 무엇인가요?<ul>
+<li><em>A1</em>: VM은 가상화를 구현하는 기술적 실체로서 관리자가 수동으로 가상 자원을 할당하고 OS를 설치 및 운영해야 하지만, 클라우드 인스턴스는 대규모 관리 자동화 API 계층(Control Plane)이 결합되어 마우스 클릭이나 API 호출 한 번으로 스토리지와 네트워크 디커플링 및 동적 오토스케일링을 완전 자동 제어할 수 있습니다.</li>
+</ul>
+</li>
+<li><strong>Q2</strong>: "도커(Docker)만으로는 대규모 MSA(마이크로서비스 아키텍처) 인프라를 운영할 수 없다"고 하는 기술적인 원인은 무엇인가요?<ul>
+<li><em>A2</em>: 도커는 단일 호스트 내부의 컨테이너 생명주기만 제어할 수 있는 실행기이기 때문입니다. 대규모 MSA 환경에서는 여러 대의 서버(멀티 노드)에 컨테이너가 분산 배치되어 서로 통신해야 하고 노드 장애 시 다른 서버로 자동 복구 및 스케줄링이 되어야 하는데, 이 클러스터 단위의 분산 통합 조율은 오케스트레이터인 쿠버네티스만 가능합니다.</li>
+</ul>
+</li>
+<li><strong>Q3</strong>: 쿠버네티스가 이기종 분산 클러스터 자원을 제어할 때 CRI, CNI, CSI 3대 표준 인터페이스를 제공하는 이유와 아키텍처적 의의를 설명하시오.<ul>
+<li><em>A3</em>: 일반 운영체제(OS)가 하드웨어를 추상화하듯, 쿠버네티스는 하부의 이기종 클라우드 환경 및 물리적 자원에 구애받지 않고 유연하게 확장 가능하도록 컴퓨팅(CRI), 네트워크(CNI), 스토리지(CSI) 가상 자원을 공통 표준 인터페이스로 완벽히 추상화하여 의존성을 디커플링하기 때문입니다.</li>
+</ul>
+</li>
+<li><strong>Q4</strong>: vSphere와 Kubernetes는 모두 오케스트레이션 계층이라고 볼 수 있습니다. 두 시스템의 가장 중요한 차이는 무엇인가요?<ul>
+<li><em>A4</em>: 가장 중요한 차이는 오케스트레이션 대상입니다. vSphere는 ESXi/Hypervisor 위의 VM을 배치, 이동, 복구하는 VM 오케스트레이션 계층이고, Kubernetes는 Worker Node 위의 Pod/Container를 배치, 확장, 복구하는 컨테이너 오케스트레이션 계층입니다.</li>
+</ul>
+</li>
+<li><strong>Q5</strong>: Kubernetes에서 Desired State, Current State, Reconcile은 각각 무엇을 의미하나요?<ul>
+<li><em>A5</em>: Desired State는 사용자가 YAML 등으로 선언한 원하는 운영 상태이고, Current State는 클러스터가 실제로 관찰한 현재 상태입니다. Reconcile은 두 상태의 차이를 줄이기 위해 Control Plane이 배치, 복구, 확장, 라우팅, 롤아웃 등을 수행하는 조정 과정입니다.</li>
+</ul>
+</li>
+<li><strong>Q6</strong>: DevOps와 AIOps는 어떤 관계인가요?<ul>
+<li><em>A6</em>: DevOps는 코드 변경을 빌드, 테스트, 배포하고 운영 피드백을 다시 개발로 돌리는 배포 자동화 루프입니다. AIOps는 운영 중 발생하는 로그, 메트릭, 트레이스, 이벤트를 분석해 이상 탐지, 원인 분석, 조치 추천을 수행하는 운영 판단 자동화 루프입니다. 둘은 경쟁 개념이 아니라 자율 운영에 가까워지기 위해 연결되는 보완적 흐름입니다.</li>
+</ul>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.indexes", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
